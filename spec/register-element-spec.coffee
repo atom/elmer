@@ -40,3 +40,24 @@ describe "registerElement", ->
       expect(args[1].prototype.one).toBe 'two'
       expect(args[1].prototype.someClassMethod).toBeDefined()
       expect(args[1].prototype.cloneNode).toBeUndefined()
+
+  describe "when a modelConstructor is passed in", ->
+    beforeEach ->
+      spyOn atom.workspace, 'addViewProvider'
+
+    it "registers the new element as a view provider on atom.workspace", ->
+      registerSpy.andReturn('view')
+      class Model
+        constructor: ->
+
+      expect(registerElement('my-tag', {one: 'two', modelConstructor: Model})).toBe 'view'
+
+      args = registerSpy.mostRecentCall.args
+      expect(args[0]).toBe 'my-tag'
+      expect(args[1].extends).toBeUndefined()
+      expect(args[1].prototype.one).toBe 'two'
+      expect(args[1].prototype.cloneNode).toBeDefined()
+
+      expect(atom.workspace.addViewProvider).toHaveBeenCalledWith
+        modelConstructor: Model
+        viewConstructor: 'view'

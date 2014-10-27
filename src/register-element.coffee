@@ -17,4 +17,11 @@ registerElement = (elementName, elementPrototype) ->
   registerArgs = {prototype}
   registerArgs.extends = tagToExtend if tagToExtend?
 
-  document.registerElement(elementName, registerArgs)
+  viewClass = document.registerElement(elementName, registerArgs)
+
+  if elementPrototype.modelConstructor? and atom?.workspace?.addViewProvider?
+    atom.workspace.addViewProvider
+      modelConstructor: elementPrototype.modelConstructor
+      viewConstructor: viewClass
+
+  viewClass
