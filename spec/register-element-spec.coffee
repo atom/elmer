@@ -43,9 +43,9 @@ describe "registerElement", ->
 
   describe "when a modelConstructor is passed in", ->
     beforeEach ->
-      spyOn atom.workspace, 'addViewProvider'
+      spyOn atom.views, 'addViewProvider'
 
-    it "registers the new element as a view provider on atom.workspace", ->
+    it "registers the new element as a view provider on atom.views", ->
       registerSpy.andReturn('view')
       class Model
         constructor: ->
@@ -58,6 +58,6 @@ describe "registerElement", ->
       expect(args[1].prototype.one).toBe 'two'
       expect(args[1].prototype.cloneNode).toBeDefined()
 
-      expect(atom.workspace.addViewProvider).toHaveBeenCalledWith
+      expect(atom.views.addViewProvider).toHaveBeenCalledWith
         modelConstructor: Model
         viewConstructor: 'view'

@@ -19,8 +19,8 @@ registerElement = (elementName, elementPrototype) ->
 
   viewClass = document.registerElement(elementName, registerArgs)
 
-  if elementPrototype.modelConstructor? and atom?.workspace?.addViewProvider?
-    atom.workspace.addViewProvider
+  if elementPrototype.modelConstructor? and atom?.views?.addViewProvider?
+    atom.views.addViewProvider
       modelConstructor: elementPrototype.modelConstructor
       viewConstructor: viewClass
 
