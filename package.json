@@ -1,6 +1,6 @@
 {
   "name": "element-kit",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Element helpers for Atom",
   "main": "./lib/element-kit",
   "scripts": {
@@ -20,8 +20,7 @@
       "url": "http://github.com/atom/element-kit/raw/master/LICENSE.md"
     }
   ],
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "coffee-cache": "^0.2.0",
     "coffee-script": "^1.7.0",
