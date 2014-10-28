@@ -1,23 +1,23 @@
 {
-  "name": "element-kit",
+  "name": "elmer",
   "version": "0.0.1",
   "description": "Element helpers for Atom",
-  "main": "./lib/element-kit",
+  "main": "./lib/elmer",
   "scripts": {
     "prepublish": "grunt clean lint coffee shell:update-atomdoc atomdoc",
     "test": "grunt test"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/atom/element-kit.git"
+    "url": "https://github.com/atom/elmer.git"
   },
   "bugs": {
-    "url": "https://github.com/atom/element-kit/issues"
+    "url": "https://github.com/atom/elmer/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "http://github.com/atom/element-kit/raw/master/LICENSE.md"
+      "url": "http://github.com/atom/elmer/raw/master/LICENSE.md"
     }
   ],
   "dependencies": {},
