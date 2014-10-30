@@ -1,6 +1,6 @@
 {
   "name": "elmer",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Element helpers for Atom",
   "main": "./lib/elmer",
   "scripts": {
