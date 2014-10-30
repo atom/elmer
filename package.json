@@ -4,7 +4,7 @@
   "description": "Element helpers for Atom",
   "main": "./lib/elmer",
   "scripts": {
-    "prepublish": "grunt clean lint coffee shell:update-atomdoc atomdoc",
+    "prepublish": "grunt clean lint coffee",
     "test": "grunt test"
   },
   "repository": {
@@ -20,7 +20,12 @@
       "url": "http://github.com/atom/elmer/raw/master/LICENSE.md"
     }
   ],
-  "dependencies": {},
+  "dependencies": {
+    "Node-bind": "git://github.com/Polymer/NodeBind.git#0.4.2",
+    "observe-js": "git://github.com/Polymer/observe-js.git#0.4.2",
+    "polymer-expressions": "git://github.com/Polymer/polymer-expressions.git#0.4.2",
+    "TemplateBinding": "git://github.com/Polymer/TemplateBinding.git#0.4.2"
+  },
   "devDependencies": {
     "coffee-cache": "^0.2.0",
     "coffee-script": "^1.7.0",
