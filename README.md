@@ -1,4 +1,5 @@
-# elmer
+##### Atom and all repositories under Atom will be archived on December 15, 2022. Learn more in our [official announcement](https://github.blog/2022-06-08-sunsetting-atom/)
+ # elmer
 
 Experimental view system for atom. Uses [polymer](polymer-project.org) [template binding](https://github.com/Polymer/TemplateBinding) project.
 
